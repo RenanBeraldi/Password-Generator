@@ -21,8 +21,8 @@ sliderEl.oninput = function () {
 // Generate a random password
 buttonEl.addEventListener("click", function () {
   let pass = "";
-  for (let i = 0, n = charset.length; i < sliderEl.value; i++) {
-    pass += charset.charAt(Math.floor(Math.random() * n));
+  for (let i = 0; i < sliderEl.value; i++) {
+    pass += charset.charAt(Math.floor(Math.random() * charset.length));
   }
   containerPasswordEl.classList.remove("hide");
   password.innerHTML = pass;
